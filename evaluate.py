@@ -7,7 +7,7 @@ import os
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 model = Net().to(device)
-model.load_state_dict(torch.load('./LeNet/epoch/module_30.pth', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load('./LeNet/mnist_model.pth', map_location=torch.device('cpu')))
 model.eval()
 
 transform = transforms.Compose([
